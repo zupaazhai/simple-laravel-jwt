@@ -28,3 +28,8 @@ php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServicePro
 
 php artisan jwt:generate
 ```
+## Add middleware
+```
+'jwt.auth' => \Tymon\JWTAuth\Middleware\GetUserFromToken::class,
+'jwt.refresh' => \Tymon\JWTAuth\Middleware\RefreshToken::class
+```
